@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>users.html</title>
+    <link rel="stylesheet" href="..\styles\style1.css">
+	<script src="..\app\cookie.js" ></script>
+	<script src="..\app\devTools.js" ></script>
+	<script src="..\app\sleep.js" ></script>
+	<script src="..\app\directories.js" ></script>
+	<script src="..\app\idGeneretor.js" ></script>
+	<script src="..\app\temp.js" ></script>
+	<script src="..\app\users.js" ></script>
+	<script>
+		"use strict";
+		let usersList = new UserList;
+		usersList.load();
+		usersList.log();
+	</script>
+</head>
+<body>
+	<a href="index.html" id="backBtn"><img class="item_button" src="assets/button_back.png" alt=""></a>
+	<img class="item_button" id="addUserBtn" src="assets/button_plus.png" alt="" onclick="usersList.goToNewUserPage()">
+<p id="welcome_header1" >Welcome, select profile</p>
+<div class="container" style="margin-top: 30px;">
+<div id="usersDiv">
+</div>
+<script >
+	      usersList.print();
+</script>
+</div>
+<br>
+<button type="button" id="addUserBtn" onclick="usersList.goToNewUserPage()">New user</button><br>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcards</title>
+    <link rel="stylesheet" href="..\styles\style1.css">
+	<script src="..\app\cookie.js" ></script>
+	<script src="..\app\devTools.js" ></script>
+	<script src="..\app\temp.js" ></script>
+	<script src="..\app\sleep.js" ></script>
+	<script src="..\app\directories.js" ></script>
+	<script src="..\app\idGeneretor.js" ></script>
+	<script src="..\app\decks.js" ></script>
+	<script src="..\app\editDeck.js" ></script>
+	<script src="..\app\cards.js" ></script>
+	<script>
+		"use strict"
+		let decks = new DeckList
+		let editDeck = new EditDeck
+	</script>
+</head>
+<body>
+<a href="decks.html" id="backBtn"><img class="item_button" src="assets/button_back.png" alt=""></a>
+	<img class="item_button" id="addDeckBtn" src="assets/button_confirm.png" alt="" onclick="editDeck.confirmChanges()">
+	<img class="item_button" class="item_button delete_button" style="margin-top: 500px;" id="addDeckBtn" src="assets/button_delete.png" alt="" onclick="decks.deleteDeck(this.id); window.location.href = 'decks.html'">
+	<img class="item_button" id="addCardBtn" style="margin-top: 760px;" src="assets/button_plus.png" alt="" onclick="window.location.href = 'pickCardType.html'">
+	<p id="welcome_header1">Edit deck</p>
+<script>
+	document.getElementById("welcome_header1").innerHTML = 'Edit deck ' + getCookie('deck')
+</script>
+<div class="container">
+<div id="deckInfo" class='item' style="margin-top: 50px;height: 340px;">
+	<div id="deckPic"  style="margin-top: 43px;margin-left: 40px; ">
+		<script>
+			editDeck.printDeckPic()
+		</script>
+	</div>
+	<div style="margin-top: 30px;margin-left: 50px;">
+	<p>Change deck cover: <input type="file" id="picSelect" accept="image/*"></p>
+	<div id="profileName">
+		<script>
+			document.write('<p>Change label: <input type="text" id="newNameInput" name="fname" placeholder="' + getCookie('deck') + '"></p>')
+		</script>
+	</div>
+</div>
+</div>
+<br><br>
+<br><br>
+<div class='item' id="Cards_message" style="display: block;">
+<p style="margin-left: 273px; margin-top: 30px;padding-top: 30px;">Cards: </p>
+<br><br>
+<div id="cardsList">
+</div>
+</div>
+<script>
+			editDeck.printCards()
+</script>
+</div>
+</body>
+</html>

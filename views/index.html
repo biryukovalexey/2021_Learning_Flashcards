@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets\icon.ico">
+    <link rel="stylesheet" href="..\styles\style1.css">
+    <title>flashcards</title>
+	<script src="..\app\cookie.js" ></script>
+    <script src="..\app\temp.js" ></script>
+    <script src="..\app\sleep.js" ></script>
+    <script src="..\app\directories.js" ></script>
+    <script>
+    	let path = require("path")
+        fs = require("fs")
+    	setCookie("lastID", -1)
+    	let docsPath = require('os').homedir();
+    	docsPath = path.join(docsPath, 'Documents')    	
+    	let directories = new Directories
+    	directories.makeDir(path.join(docsPath, 'Flashcards'))
+    	let usersPath = path.join(docsPath, 'Flashcards', 'users')
+    	directories.makeDir(usersPath)
+       directories.copyFile(path.resolve(path.join('views', 'assets', '3.gif')), path.resolve(path.join('views', 'tmp', '3.gif')))
+    	setCookie('usersPath', usersPath)
+        function startDev() {
+            require('nw.gui').Window.get().showDevTools()
+            setCookie('mode', 'dev')
+        }
+        function startUser() {
+            
+            setCookie('mode', 'user')
+        }
+    </script>
+</head>
+<body style="background-image: url('../views/assets/backgr_0.png');">
+<a href="#" id="backBtn" ><img class="item_button" src="assets/button_invisible.png" alt="" onclick="require('nw.gui').Window.get().showDevTools()"></a>
+<a href="users.html" ><img class="item_button" id="addDeckBtn" src="assets/button_login.png" alt="" onclick="startUser()"></a>
+</body>
+</html>

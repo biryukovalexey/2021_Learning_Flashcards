@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcards</title>
+    <link rel="stylesheet" href="..\styles\style1.css">
+	<script src="..\app\cookie.js" ></script>
+	<script src="..\app\devTools.js" ></script>
+	<script src="..\app\temp.js" ></script>
+	<script src="..\app\sleep.js" ></script>
+	<script src="..\app\idGeneretor.js" ></script>
+	<script src="..\app\directories.js" ></script>
+	<script src="..\app\cards.js" ></script>
+	<script src="..\app\editCard.js" ></script>
+</head>
+<body>
+<a href="#" id="backBtn" ><img class="item_button" src="assets/button_back.png" alt="" onclick="goBack()"></a>
+	<p id="welcome_header1">Edit deck</p>
+<div class="container" >
+	<div id="deckInfo" class='item front_t_t' style="height: 500px;">
+		<div id="cardContentDiv">
+			<p id="cardContent">
+				<div id="picPreviewContent"></div>
+			</p>
+		</div>
+	<script>
+		function goBack() {
+			window.location.href = "../views/decks.html"
+		}
+		let editCard = new EditCard
+		editCard.pickType(getCookie("card"))
+	</script>
+	<br>
+	</div>
+</div>
+</body>
+</html>

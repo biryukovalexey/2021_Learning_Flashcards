@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcards</title>
+    <link rel="stylesheet" href="..\styles\style1.css">
+	<script src="..\app\cookie.js" ></script>
+	<script src="..\app\temp.js" ></script>
+	<script src="..\app\devTools.js" ></script>
+	<script src="..\app\sleep.js" ></script>
+	<script src="..\app\directories.js" ></script>
+	<script src="..\app\idGeneretor.js" ></script>
+	<script src="..\app\users.js" ></script>
+	<script src="..\app\newUser.js" ></script>
+	<script>
+		"use strict"
+		let newUser = new NewUser
+	</script>
+</head>
+<body>
+<a href="users.html" id="backBtn"><img class="item_button" src="assets/button_back.png" alt=""></a>
+	<img class="item_button" id="addDeckBtn" src="assets/button_confirm.png" alt="" onclick="newUser.confirm()">
+	<p id="welcome_header1">Create new user</p>
+<div class="container" >
+<div id="userInfo" class='item item_mid'>
+	<div id="profilePic" >
+		<div id="profilePicContent" >
+		</div>
+	</div>
+	<div style="margin-top: 30px;margin-left: 50px;">
+	<p>Pick profile picture: <input type="file" id="picSelect" accept="image/*" ></p>
+	<div id="profileName" >
+		<p>Name: <input type="text" id="newNameInput" name="fname"></p>
+		<script>
+			//document.write('<p>Name: <input type="text" id="newNameInput" name="fname"></p>')
+		</script>
+	</div>
+</div>
+</div>
+</div>
+</body>
+</html>

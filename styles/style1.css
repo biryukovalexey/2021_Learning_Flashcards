@@ -1,0 +1,136 @@
+html {
+	font-family: 'Century Gothic', sans-serif;
+	color: #3c2012;
+}
+p {
+	font-size: 30px;
+	color: #3c2012;
+}
+body {
+ background-image: url("../views/assets/backgr_1.png");
+ background-repeat: no-repeat;
+ background-color: #3c2012;
+}
+hr {
+	border: 1px solid #3c2012;
+	border-radius: 5px;
+}
+#welcome_header {
+	margin-left: 150px;
+	
+	display: inline-flex;
+}
+#welcome_header1 {
+	margin-left: 150px;
+	margin-top: 50px;
+	display: inline-flex;
+}
+.container {
+	width: 650px;
+	margin-left: 150px;	
+}
+.item {
+	height: 97px;
+	width: 640px;
+	margin-left: 22px;
+	margin-top: 22px;
+	background-color: #f1c07a;
+	border-radius: 15px;
+	display: inline-flex;
+}
+.item_mid {
+	height: 230px;
+}
+.item_big {
+	height: 250px;
+}
+.item_img {
+	height:70px; 
+	width:70px; 
+	margin-top: 13px;
+	margin-left: 12px;
+	image-rendering: -webkit-optimize-contrast;
+	border-radius: 50px;
+}
+.item_name {
+	margin-left: 12px;
+}
+.item_buttons {
+	position: absolute;
+	margin-top: 8px;
+	margin-left: 393px;
+}
+.item_button {
+	padding: 0;
+	cursor: pointer;
+}
+.profilePicImg {
+	height:70px; 
+	width:70px; 
+	image-rendering: -webkit-optimize-contrast;
+	
+	border-radius: 50px;
+}
+#welcome_header_text {
+	margin-top: 19px;
+	margin-left: 15px;
+}
+#addDeckBtn {
+	position : fixed;
+	margin-top: 850px;
+	margin-left: 875px;
+}
+#addUserBtn {
+	position : fixed;
+	margin-top: 850px;
+	margin-left: 875px;
+}
+#backBtn {
+	position : fixed;
+	margin-top: 850px;
+	margin-left: 30px;
+}
+#bottom_pic {
+	position : fixed;
+	margin-top: 485px;
+	margin-left: 102px;
+}
+.front_t_t {
+	width: 600px;
+	padding: 15px;
+	text-align: center;	
+	margin-left: 25px;
+	margin-top: 22px;
+	background-color: #f1c07a;
+	border-radius: 15px;
+	word-wrap: break-word;     
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;   
+}
+#flipButton {
+		position : fixed;
+	margin-top: 850px;
+	margin-left: 875px;
+}
+.front_pic {
+	margin: 0 auto;
+	max-width: 600px;
+	border-radius: 15px;
+}
+.delete_button {
+	position : fixed;
+	margin-top: 680px;
+	margin-left: 875px;
+}
+#addCardBtn {
+	position : fixed;
+	margin-top: 600px;
+	margin-left: 875px;
+}
+.p_compact {
+	font-size: 20px;
+}
+.card_icon {
+	margin-left:35px; 
+	margin-top:30px; 
+}

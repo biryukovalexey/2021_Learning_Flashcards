@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcards</title>
+    <link rel="stylesheet" href="..\styles\style1.css">
+	<script src="..\app\cookie.js" ></script>
+	<script src="..\app\devTools.js" ></script>
+	<script src="..\app\sleep.js" ></script>
+	<script src="..\app\temp.js" ></script>
+	<script src="..\app\directories.js" ></script>
+	<script src="..\app\idGeneretor.js" ></script>
+	<script src="..\app\users.js" ></script>
+	<script src="..\app\editUser.js" ></script>
+	<script>
+		"use strict"
+		let users = new UserList
+		let editUser = new EditUser
+	</script>
+</head>
+<body>
+<script>
+			document.write('<img class="item_button delete_button" id="deleteUser'+ editUser.getUserNameCookie() +'" src="assets/button_delete.png" alt="" onclick="users.deleteUser(this.id)">')
+</script>
+<a href="users.html" id="backBtn"><img class="item_button" src="assets/button_back.png" alt=""></a>
+	<img class="item_button" id="addDeckBtn" src="assets/button_confirm.png" alt="" onclick="editUser.confirmChanges()">
+	<p id="welcome_header1">Edit user</p>
+<script>
+	document.getElementById("welcome_header1").innerHTML = 'Edit user ' + editUser.getUserNameCookie()
+</script>
+<div class="container">
+<div id="userInfo"class='item' style="margin-top: 50px;height: 340px;">
+	<div id="profilePic" style="margin-top: 43px;margin-left: 40px; ">
+		<script>
+			editUser.printProfilePic()
+		</script>
+	</div>
+	<div style="margin-top: 30px;margin-left: 50px;">
+	<p>Change profile picture: <input type="file" id="picSelect" accept="image/*" ><!--<button type="button" onclick="editUser.previewProfilePic()">Preview</button></p>-->
+	<div id="profileName">
+		<script>
+			document.write('<p>Change name: <input type="text" id="newNameInput" name="fname" placeholder="' + editUser.getUserNameCookie() + '"></p>')
+		</script>
+	</div>
+</div>
+</div>
+</div>
+</body>
+</html>

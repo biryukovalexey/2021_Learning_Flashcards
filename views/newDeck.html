@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcards</title>
+    <link rel="stylesheet" href="..\styles\style1.css">
+	<script src="..\app\cookie.js" ></script>
+	<script src="..\app\devTools.js" ></script>
+	<script src="..\app\temp.js" ></script>
+	<script src="..\app\directories.js" ></script>
+	<script src="..\app\idGeneretor.js" ></script>
+	<script src="..\app\decks.js" ></script>
+	<script src="..\app\newDeck.js" ></script>
+	<script>
+		"use strict"
+		let newDeck = new NewDeck
+	</script>
+</head>
+<body>
+<a href="decks.html" id="backBtn"><img class="item_button" src="assets/button_back.png" alt=""></a>
+	<img class="item_button" id="addDeckBtn" src="assets/button_confirm.png" alt="" onclick="newDeck.confirm()">
+	<p id="welcome_header1">Create new deck</p>
+<div class="container">
+<div id="userInfo" class='item item_mid'>
+	<div id="deckPic">
+		<div id="deckPicContent">
+			
+		</div>
+	</div>
+	<div style="margin-top: 30px;margin-left: 50px;">
+	<p>Pick deck cover: <input type="file" id="picSelect" accept="image/*" ><!--<button type="button" onclick="newDeck.previewDeckPic()">Preview</button>--></p>
+	<div id="deckName">
+		<p>Label: <input type="text" id="newNameInput" name="fname"></p>
+	</div>
+</div>
+</div>
+</div>
+</body>
+</html>

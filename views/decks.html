@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcards</title>
+    <link rel="stylesheet" href="..\styles\style1.css">
+	 <script src="..\app\cookie.js" ></script>
+	 <script src="..\app\sleep.js" ></script>
+	  <script src="..\app\temp.js" ></script>
+	 <script src="..\app\devTools.js" ></script>
+	 <script src="..\app\directories.js" ></script>
+	<script src="..\app\idGeneretor.js" ></script>
+	<script src="..\app\decks.js" ></script>
+	 <script>
+	 	"use strict";
+		const userNameSession = getCookie("user")
+		let decksArr = new DeckList;
+		decksArr.load();
+		decksArr.log();
+	 </script>
+</head>
+<body>
+	<a href="users.html" id="backBtn"><img class="item_button" src="assets/button_back.png" alt=""></a>
+	<img class="item_button" id="addDeckBtn" src="assets/button_plus.png" alt="" onclick="decksArr.goToNewDeckPage()">
+	<p id="welcome_header"></p>
+	<div class="container">
+	<script >
+		let path = require("path")
+		let fs = require('fs')
+		let temp1 = new Temp;
+		let profilePicPath = path.join(getCookie('usersPath'), userNameSession, 'profile', 'profilePic.jpg')
+		if (fs.existsSync(profilePicPath)) profilePicPath = temp1.getPicPath(profilePicPath) 
+		let fullPicPath = path.join(getCookie('usersPath'), userNameSession, 'profile', 'profilePic.jpg')
+		if (!fs.existsSync(fullPicPath)) {
+			profilePicPath = 'assets' 
+			if (isDev()) profilePicPath = path.resolve(profilePicPath)
+			profilePicPath = path.join(profilePicPath, 'defaultProfilePic.jpg')
+		}
+		document.getElementById("welcome_header").innerHTML = '<img src="' + profilePicPath + 
+		'" alt="pic" class="profilePicImg"><p id="welcome_header_text">' + userNameSession + ', select a deck</p>';
+		decksArr.print();
+	</script>
+	</div>
+<br><br>
+</body>
+</html>
